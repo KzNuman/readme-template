@@ -99,4 +99,15 @@ http://www.replicasdmin.com
 
 <!-- ![image](image/Imnothn.webp) -->
 
-<img src="./image/Imnothn.webp" width="400" title="I am nothing without you">
+<img src="./image/Imnothn.webp" width="400" title="I am nothing without you">  
+😊
+<br/>
+
+### table syntax
+| Name | Email |
+| ------| ------|
+| John | john@gmail.com |
+| Khaza Numan | @KzNuman |
+| Khaza Numan | kznuman2@gmail.com |
+
+<br/>
