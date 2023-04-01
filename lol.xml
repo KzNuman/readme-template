@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="op_waiver_rule_tree_view" model="ir.ui.view">
+            <field name="name">op.waiver.rule.tree.view</field>
+            <field name="model">op.waiver.rule</field>
+            <field name="priority" eval="7" />
+            <field name="arch" type="xml">
+                <tree string="Waiver Rules">
+                    <field name="code"/>
+                   <!--<field name="semester_id" string="Semester"/>-->
+                    <field name="campus_id"/>
+                    
+                    <field name="academic_faculty_id"/>
+                    <field name="course_id"/>
+                    <field name="waiver_type"/>
+                    <field name="gender"/>
+                    <field name="semester_min_sgpa"/>
+                    <field name="semester_max_sgpa"/>
+                    <field name="semester_minimum_credit"/>
+                    <field name="waiver_rate"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Form View -->
+        <record id="op_waiver_rule_form_view" model="ir.ui.view">
+            <field name="name">op.waiver.rule.form.view</field>
+            <field name="model">op.waiver.rule</field>
+            <field name="priority" eval="7" />
+            <field name="arch" type="xml">
+                <form string="Waiver Rule Form">
+                    <sheet string="Waiver Rule">
+                        <h3>
+                            <!-- <label for="name" string="Title"/>
+                            <field name="name" readonly="True"/> -->
+                            Waiver Rule
+                        </h3>
+                        <group col="4" string="Basic">
+                            <field name="waiver_type"/>
+                            <!--<field name="semester_id"/>-->
+                            <field name="student_type_id"/>
+                            <field name="waiver_category_id"/>
+                            <field name="academic_faculty_id"/>
+                            <field name="course_id" string="Program"/>
+                            <field name="campus_id"/>
+                            <field name="education_shift_id"/>
+                            <field name="academic_medium_type"/>
+                            <field name="institute_type"/>
+                            <field name="gender"/>
+                        </group>
+                        <group col="4" string="Educational">
+                            <field name="is_ssc_golden"/>
+                            <field name="ssc_maximum_gpa"/>
+                            <field name="ssc_minimum_gpa"/>
+                            <field name="hsc_maximum_gpa"/>
+                            <field name="is_hsc_golden"/>
+                            <field name="semester_min_sgpa"/>
+                            <field name="hsc_minimum_gpa"/>
+                            
+                            
+                            <field name="semester_max_sgpa"/>
+                            <field name="semester_minimum_credit"/>
+                            <field name="waiver_rate"/>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Act Window & Menu Configuration -->
+        <record id="action_op_waiver_rule_view" model="ir.actions.act_window">
+            <field name="name">Waiver Rule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.waiver.rule</field>
+            <field name="domain">[]</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="op_waiver_rule_tree_view"/>
+        </record>
+        
+    </data>
+</odoo>
